@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', init);
-const myInterval = "";
  
 function init() {
   //create shortcut vars
@@ -49,7 +48,7 @@ function changeSlide(e) {
     const slides = frame.querySelectorAll("img");
     const caption = document.querySelector(".caption");
     let showing = document.querySelector(".current");
-  
+    const myInterval = "";
     let nextUp = "";
   
     if(!e || e.target.className == 'next-btn') {
