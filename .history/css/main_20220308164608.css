@@ -13,11 +13,6 @@ body {
   background-attachment: fixed;
 }
 
-h1, h2, h3{
-
-  font-family: 'Work Sans', sans-serif;
-
-}
 
 section {
   min-height: max-content;
@@ -60,7 +55,6 @@ section {
 }
 
 .caption {
-  font-family: 'Lora', serif;
   position: absolute;
   z-index: 3;
   color: #fff;
@@ -72,22 +66,12 @@ section {
 }
 
 .controls {
-  font-family: 'Lora', serif;
   display: none;
 }
 
 .content{
-  margin: 1rem;
+  margin: 5rem;
     padding: 1rem;
   background-color: #AEE6F2;
   border-radius: 25px;
 }
-
-@media only screen and (min-width: 768px) {
-  .content{
-      margin-left: auto;
-      margin-right: auto;
-      align-content: center;
-      max-width: 670px;
-  }
-  }
