@@ -8,7 +8,7 @@ function init() {
   const slides = frame.querySelectorAll("img");
   const caption = document.querySelector(".caption");
   const controls = document.querySelector(".controls");
-  const myInterval = "";
+  const myInterval = '';
 
   //with JS active, hide all images
   slides.forEach((slide) => {
@@ -25,12 +25,12 @@ function init() {
    // set the caption dynamically
    caption.innerHTML = frame.firstElementChild.alt;
 
-   
+   myInterval = setInterval(changeSlide, 5000);
 
    //show the controls
    controls.style.display = "block";
 
-   myInterval = setInterval(changeSlide, 5000);
+   
 }
 
 
@@ -40,7 +40,7 @@ function changeSlide(e) {
     // stop link from trying to reload page
     if(e){
       e.preventDefault();
-      let clearInt = clearInterval(myInterval)
+      clearInterval(myInterval);
     }
     
     //shortcut vars

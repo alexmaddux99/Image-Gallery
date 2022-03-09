@@ -8,7 +8,7 @@ function init() {
   const slides = frame.querySelectorAll("img");
   const caption = document.querySelector(".caption");
   const controls = document.querySelector(".controls");
-  const myInterval = "";
+  const myInterval = '';
 
   //with JS active, hide all images
   slides.forEach((slide) => {
@@ -40,7 +40,7 @@ function changeSlide(e) {
     // stop link from trying to reload page
     if(e){
       e.preventDefault();
-      let clearInt = clearInterval(myInterval)
+      clearInterval(myInterval);
     }
     
     //shortcut vars
@@ -52,10 +52,11 @@ function changeSlide(e) {
   
     if(!e || e.target.className == 'next-btn') {
       nextUp = showing.nextElementSibling;
-    }else{
-      nextUp = showing.previousElementSibling;
     }
   
+    if(e.target.className == 'back-btn') {
+      nextUp = showing.previousElementSibling;
+    }
     
     // deactivate current image
     showing.classList.toggle("hide");

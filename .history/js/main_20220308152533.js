@@ -8,7 +8,6 @@ function init() {
   const slides = frame.querySelectorAll("img");
   const caption = document.querySelector(".caption");
   const controls = document.querySelector(".controls");
-  const myInterval = "";
 
   //with JS active, hide all images
   slides.forEach((slide) => {
@@ -25,12 +24,8 @@ function init() {
    // set the caption dynamically
    caption.innerHTML = frame.firstElementChild.alt;
 
-   
-
    //show the controls
    controls.style.display = "block";
-
-   myInterval = setInterval(changeSlide, 5000);
 }
 
 
@@ -38,10 +33,7 @@ function init() {
 function changeSlide(e) {
   
     // stop link from trying to reload page
-    if(e){
-      e.preventDefault();
-      let clearInt = clearInterval(myInterval)
-    }
+    e.preventDefault();
     
     //shortcut vars
     const frame = document.querySelector(".frame");
@@ -50,12 +42,14 @@ function changeSlide(e) {
     let showing = document.querySelector(".current");
     let nextUp = "";
   
-    if(!e || e.target.className == 'next-btn') {
+    if(e.target.className == 'next-btn') {
       nextUp = showing.nextElementSibling;
-    }else{
-      nextUp = showing.previousElementSibling;
+      setInterval(2000)
     }
   
+    if(e.target.className == 'back-btn') {
+      nextUp = showing.previousElementSibling;
+    }
     
     // deactivate current image
     showing.classList.toggle("hide");
@@ -77,4 +71,5 @@ function changeSlide(e) {
     //change caption text
     caption.innerHTML = nextUp.alt;
   }
+  
   

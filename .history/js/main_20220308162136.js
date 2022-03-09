@@ -8,7 +8,7 @@ function init() {
   const slides = frame.querySelectorAll("img");
   const caption = document.querySelector(".caption");
   const controls = document.querySelector(".controls");
-  const myInterval = "";
+  const myInterval = '';
 
   //with JS active, hide all images
   slides.forEach((slide) => {
