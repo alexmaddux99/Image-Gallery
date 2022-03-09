@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', init);
 const myInterval = "";
+myInterval = setInterval(changeSlide, 5000);
  
 function init() {
   //create shortcut vars
@@ -31,7 +32,7 @@ function init() {
    //show the controls
    controls.style.display = "block";
 
-   myInterval = setInterval(changeSlide, 5000);
+   
 }
 
 

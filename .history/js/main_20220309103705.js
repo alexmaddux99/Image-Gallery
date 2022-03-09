@@ -26,12 +26,13 @@ function init() {
    // set the caption dynamically
    caption.innerHTML = frame.firstElementChild.alt;
 
-   
+   myInterval = setInterval(changeSlide, 5000);
+}
 
    //show the controls
    controls.style.display = "block";
 
-   myInterval = setInterval(changeSlide, 5000);
+   
 }
 
 

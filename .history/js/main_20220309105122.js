@@ -31,10 +31,10 @@ function init() {
    //show the controls
    controls.style.display = "block";
 
-   myInterval = setInterval(changeSlide, 5000);
+   
 }
 
-
+myInterval = setInterval(changeSlide, 5000);
 
 function changeSlide(e) {
   
