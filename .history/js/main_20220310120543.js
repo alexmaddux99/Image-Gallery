@@ -29,7 +29,6 @@ function init() {
    //show the controls
    controls.style.display = "block";
 
-  
    myInterval = setInterval(changeSlide, 5000);
 }
 
@@ -47,6 +46,7 @@ function changeSlide(e) {
     const frame = document.querySelector(".frame");
     const slides = frame.querySelectorAll("img");
     const caption = document.querySelector(".caption");
+    const numb = document.querySelector(".numb")
     let showing = document.querySelector(".current");
     let nextUp = "";
   
@@ -77,6 +77,6 @@ function changeSlide(e) {
     //change caption text
     caption.innerHTML = nextUp.alt;
 
-    
+    numb.innerHTML = nextUp.numb;
   }
   

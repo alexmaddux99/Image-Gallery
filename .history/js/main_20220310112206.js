@@ -29,7 +29,6 @@ function init() {
    //show the controls
    controls.style.display = "block";
 
-  
    myInterval = setInterval(changeSlide, 5000);
 }
 
@@ -40,6 +39,7 @@ function changeSlide(e) {
     // stop link from trying to reload page
     if(e) {
       e.preventDefault();
+    }else{
       clearInterval(myInterval);
     }
     
@@ -76,7 +76,5 @@ function changeSlide(e) {
 
     //change caption text
     caption.innerHTML = nextUp.alt;
-
-    
   }
   

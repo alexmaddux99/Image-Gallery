@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', init);
-var myInterval = "";
+const myInterval = "";
  
 function init() {
   //create shortcut vars
@@ -26,19 +26,20 @@ function init() {
    // set the caption dynamically
    caption.innerHTML = frame.firstElementChild.alt;
 
+   
+
    //show the controls
    controls.style.display = "block";
 
-  
-   myInterval = setInterval(changeSlide, 5000);
+   
 }
 
-
+myInterval = setInterval(changeSlide, 5000);
 
 function changeSlide(e) {
   
     // stop link from trying to reload page
-    if(e) {
+    if(e){
       e.preventDefault();
       clearInterval(myInterval);
     }
@@ -48,6 +49,7 @@ function changeSlide(e) {
     const slides = frame.querySelectorAll("img");
     const caption = document.querySelector(".caption");
     let showing = document.querySelector(".current");
+  
     let nextUp = "";
   
     if(!e || e.target.className == 'next-btn') {
@@ -76,7 +78,5 @@ function changeSlide(e) {
 
     //change caption text
     caption.innerHTML = nextUp.alt;
-
-    
   }
   

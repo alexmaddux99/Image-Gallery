@@ -25,12 +25,15 @@ function init() {
 
    // set the caption dynamically
    caption.innerHTML = frame.firstElementChild.alt;
+   num1.innerHTML = div.firstElemenChild.numb;
 
    //show the controls
    controls.style.display = "block";
 
-  
+   
+
    myInterval = setInterval(changeSlide, 5000);
+   
 }
 
 
@@ -47,6 +50,7 @@ function changeSlide(e) {
     const frame = document.querySelector(".frame");
     const slides = frame.querySelectorAll("img");
     const caption = document.querySelector(".caption");
+    const numb1 = document.querySelector(".numb1")
     let showing = document.querySelector(".current");
     let nextUp = "";
   
@@ -77,6 +81,6 @@ function changeSlide(e) {
     //change caption text
     caption.innerHTML = nextUp.alt;
 
-    
+    numb1.innerHTML = nextUp.numb;
   }
   

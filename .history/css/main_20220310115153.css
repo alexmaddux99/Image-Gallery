@@ -83,6 +83,12 @@ section {
   border-radius: 25px;
 }
 
+.numb{
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
 
 @media only screen and (min-width: 768px) {
   .content{

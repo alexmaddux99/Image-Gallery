@@ -29,7 +29,6 @@ function init() {
    //show the controls
    controls.style.display = "block";
 
-  
    myInterval = setInterval(changeSlide, 5000);
 }
 
@@ -76,7 +75,5 @@ function changeSlide(e) {
 
     //change caption text
     caption.innerHTML = nextUp.alt;
-
-    
   }
   
